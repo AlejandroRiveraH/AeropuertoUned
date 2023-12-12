@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AEROPUERTODBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ATERRIZAJES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fecha_Despegue" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hora_Despegue" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tecnico" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mision" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Serie" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fecha_Retorno" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hora_Retorno" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Perdido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Perdidas_Humanas" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Rescate" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AVIONES">
+          <Key>
+            <PropertyRef Name="Serie" />
+          </Key>
+          <Property Name="Fecha" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hora" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Marca" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Modelo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Serie" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre_Avion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dimensiones" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Recorrido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Numero_Orden" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tecnico" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AVIONES_RETIRADOS">
+          <Key>
+            <PropertyRef Name="Serie" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Marca" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Modelo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Serie" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre_Avion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dimensiones" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Recorrido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Numero_Orden" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tecnico" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DESPEGUES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fecha_Despegue" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hora_Despegue" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tecnico" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mision" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Serie" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AEROPUERTODBModelStoreContainer">
+          <EntitySet Name="ATERRIZAJES" EntityType="Self.ATERRIZAJES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AVIONES" EntityType="Self.AVIONES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AVIONES_RETIRADOS" EntityType="Self.AVIONES_RETIRADOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DESPEGUES" EntityType="Self.DESPEGUES" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AEROPUERTODBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ATERRIZAJES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fecha_Despegue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Hora_Despegue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tecnico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Serie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fecha_Retorno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Hora_Retorno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Perdido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Perdidas_Humanas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Rescate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AVIONES">
+          <Key>
+            <PropertyRef Name="Serie" />
+          </Key>
+          <Property Name="Fecha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Hora" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Serie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_Avion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dimensiones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Recorrido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Numero_Orden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tecnico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AVIONES_RETIRADOS">
+          <Key>
+            <PropertyRef Name="Serie" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Serie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_Avion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dimensiones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Recorrido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Numero_Orden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tecnico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DESPEGUES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fecha_Despegue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Hora_Despegue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tecnico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Serie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AEROPUERTODBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ATERRIZAJES" EntityType="Self.ATERRIZAJES" />
+          <EntitySet Name="AVIONES" EntityType="Self.AVIONES" />
+          <EntitySet Name="AVIONES_RETIRADOS" EntityType="Self.AVIONES_RETIRADOS" />
+          <EntitySet Name="DESPEGUES" EntityType="Self.DESPEGUES" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AEROPUERTODBModelStoreContainer" CdmEntityContainer="AEROPUERTODBEntities">
+          <EntitySetMapping Name="ATERRIZAJES">
+            <EntityTypeMapping TypeName="AEROPUERTODBModel.ATERRIZAJES">
+              <MappingFragment StoreEntitySet="ATERRIZAJES">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Fecha_Despegue" ColumnName="Fecha_Despegue" />
+                <ScalarProperty Name="Hora_Despegue" ColumnName="Hora_Despegue" />
+                <ScalarProperty Name="Tecnico" ColumnName="Tecnico" />
+                <ScalarProperty Name="Mision" ColumnName="Mision" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="Fecha_Retorno" ColumnName="Fecha_Retorno" />
+                <ScalarProperty Name="Hora_Retorno" ColumnName="Hora_Retorno" />
+                <ScalarProperty Name="Perdido" ColumnName="Perdido" />
+                <ScalarProperty Name="Perdidas_Humanas" ColumnName="Perdidas_Humanas" />
+                <ScalarProperty Name="Rescate" ColumnName="Rescate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AVIONES">
+            <EntityTypeMapping TypeName="AEROPUERTODBModel.AVIONES">
+              <MappingFragment StoreEntitySet="AVIONES">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="Nombre_Avion" ColumnName="Nombre_Avion" />
+                <ScalarProperty Name="Dimensiones" ColumnName="Dimensiones" />
+                <ScalarProperty Name="Recorrido" ColumnName="Recorrido" />
+                <ScalarProperty Name="Numero_Orden" ColumnName="Numero_Orden" />
+                <ScalarProperty Name="Tecnico" ColumnName="Tecnico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AVIONES_RETIRADOS">
+            <EntityTypeMapping TypeName="AEROPUERTODBModel.AVIONES_RETIRADOS">
+              <MappingFragment StoreEntitySet="AVIONES_RETIRADOS">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="Nombre_Avion" ColumnName="Nombre_Avion" />
+                <ScalarProperty Name="Dimensiones" ColumnName="Dimensiones" />
+                <ScalarProperty Name="Recorrido" ColumnName="Recorrido" />
+                <ScalarProperty Name="Numero_Orden" ColumnName="Numero_Orden" />
+                <ScalarProperty Name="Tecnico" ColumnName="Tecnico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DESPEGUES">
+            <EntityTypeMapping TypeName="AEROPUERTODBModel.DESPEGUES">
+              <MappingFragment StoreEntitySet="DESPEGUES">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Fecha_Despegue" ColumnName="Fecha_Despegue" />
+                <ScalarProperty Name="Hora_Despegue" ColumnName="Hora_Despegue" />
+                <ScalarProperty Name="Tecnico" ColumnName="Tecnico" />
+                <ScalarProperty Name="Mision" ColumnName="Mision" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
